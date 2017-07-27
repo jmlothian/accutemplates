@@ -1,0 +1,28 @@
+
+{{data:if}} (Model.Indices.Count == 0) { return; {{end}}
+
+<div class="block">
+	<h3 class="block__header">
+		{{data:Model.Heading}}
+	</h3>
+	<div class="list">
+		{{for:index:Model.Indices}}
+			<div class="list__item list__item--pad10">
+				<div class="group">
+					<div class="group__item group__item--no-border group__item--width60">
+                        <div class="container container--mar-b10">
+                            <div class="icon__huafeng icon__huafeng--{{data:index.ID}}"></div>
+                        </div>
+					</div>
+					<div class="group__item">
+						<div class="text--size15 text--green">{{data:index.Name}}</div>
+						<div class="text--size20 text--green text--bold">{{data:index.Category}}</div>
+					</div>
+
+				</div>
+
+				<div class="text--size13">{{data:index.Text}}</div>
+			</div>
+		{{end}}
+	</div>
+</div>

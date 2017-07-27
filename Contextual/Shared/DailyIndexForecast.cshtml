@@ -1,0 +1,32 @@
+
+
+<div class="container container--pad10">
+    <div class="text text--center text--uppercase text--bold text--blue">{{data:Model.Day}}</div>
+    <div class="text text--size12 text--center text--gray text--uppercase">{{data:Model.Date}}</div>
+
+    <div class="container container--pad10 text text--center">
+        <img src="{{data:Model.GraphImageUrl}}" alt="{{data:Model.GraphAltText}}" width="88" height="59">
+    </div>
+
+    <div>
+        <p class="text text--center text--navy text--size12">{{data:Model.IndexValueText}}</p>
+        <p class="hidden text text--size11 text--gray4 text--center" data-toggle="index-text">{{data:Model.IndexText}}</p>
+    </div>
+
+    <div class="text text--center">
+	    <div class="container container--inline-block container--valign-top">
+		    <div class="icon icon--40x40 icon--{{data:Model.ForecastIconClass}}"></div>
+	    </div>
+		<div class="container container--inline-block">
+            <div>
+	            <span class="text text--size18 text--navy">{{data:Model.Temperature.Maximum}}</span><span class="text text--size10 text--gray text--uppercase">{{data:Model.HiLabel}}</span>
+            </div>
+            <div>
+                <span class="text text--size18 text--navy">{{data:Model.Temperature.Minimum}}</span><span class="text text--size10 text--gray text--uppercase">{{data:Model.LoLabel}}</span>
+            </div>
+        </div>
+
+        <p class="text text--orange text--size20" data-toggle-text="&ndash;">+</p>
+    </div>
+
+</div>

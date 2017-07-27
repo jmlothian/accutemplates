@@ -1,0 +1,36 @@
+
+
+<div class="block">
+    
+    <div class="block__module">
+        <h2 class="text text--blue text--bold text--uppercase">{{data:Model.CurrentWeatherLabel}}</h2>
+
+        <div class="group">
+            <div class="group__item group__item--no-border group__item--three">
+                <div class="text text--roboto text--navy text--size65 text--light">{{data:Model.Temperature}}</div>
+                <div class="text text--size12 text--gray4">{{data:Model.RealFeelLabel}}: <b>{{data:Model.RealFeelTemperature}}</b></div>
+            </div>
+
+            <div class="group__item">
+                <div class="icon icon--{{data:Model.IconClass}} icon--120x120"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <p class="text text--h2 text--navy">{{data:Model.WeatherText}}</p>
+
+            <div class="text text--size12 text--gray4"><b>{{data:Model.PressureLabel}}:</b> {{raw-data:Model.Pressure}}</div>
+            <div class="text text--size12 text--gray4"><b>{{data:Model.DewPointLabel}}:</b> {{data:Model.DewPoint}}</div>
+            <div class="text text--size12 text--gray4"><b>{{data:Model.VisibilityLabel}}:</b> {{data:Model.Visibility}}</div>
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="group__item group__item--two">
+	        {{link:Model.HourlyButtonLink:block__more}}
+        </div>
+        <div class="group__item group__item--two">
+	        {{link:Model.TomorrowButtonLink:block__more}}
+        </div>
+    </div>
+</div>
